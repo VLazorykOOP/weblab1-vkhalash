@@ -48,100 +48,103 @@
 
     <hr noshade color=#e5e5e5>
 
-    <table border="1" cellspacing="0" align="center" bgcolor="#ffffff">
-        <caption style="caption-side: top; font-weight: bold; margin-bottom: 10px;">Новинки у бібліотеці</caption>
-        <thead>
-            <tr bgcolor="#f2f2f2">
-                <th>Автор(и)</th>
-                <th>Назва</th>
-                <th>Видавництво</th>
-                <th>Кількість сторінок</th>
-                <th>Жанр</th>
-                <th>Ціна</th>
-                <th>Книгосховище</th>
-                <th>Обліковий номер книги</th>
+    <table id="info-table" bgcolor="#f9f9f9" border="1" cellpadding="10" cellspacing="0" width="100%">
+        <caption id="table-caption" title="Таблиця бібліотечних даних">Інформація про книги у бібліотеці</caption>
+        <colgroup id="column-group" title="Група колонок">
+            <col style="width: 50px">
+            <col style="width: 180px">
+            <col style="width: 125px">
+            <col style="width: 90px">
+            <col style="width: 90px">
+            <col style="width: 60px">
+        </colgroup>
+        <thead style="background-color: lightgray;" dir="ltr" aling="center" charoff="10">
+            <tr style="font-weight: bold;" dir="ltr" aling="center" char=".">
+                <th rowspan="3" scope="col" abbr="ID" headers="id-header">ID</th>
+                <th rowspan="3" scope="col" abbr="Назва книги" headers="book-title-header">Назва книги</th>
+                <th colspan="3" id="publisher-info-header" title="Інформація про видавця" lang="uk" dir="ltr"
+                    scope="col">
+                    Інформація про видавця</th>
+                <th rowspan="3" scope="col" abbr="Кількість сторінок" headers="page-count-header">Кількість сторінок
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="2" abbr="Видавництво" scope="col" headers="publisher-info-header">Видавництво</th>
+                <th colspan="2" abbr="Дані контакту" scope="col" headers="publisher-info-header">Дані контакту</th>
+            </tr>
+            <tr>
+                <th scope="col" abbr="Місто">Місто</th>
+                <th scope="col" abbr="Телефон">Телефон</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Іван Франко</td>
-                <td>Захар Беркут</td>
-                <td>Львівське видавництво</td>
-                <td>250</td>
-                <td>Історичний роман</td>
-                <td>200 грн</td>
-                <td>Сектор 3, Полиця 5</td>
-                <td>123456789</td>
-            </tr>
-            <tr>
-                <td>Леся Українка</td>
-                <td>Лісова пісня</td>
-                <td>Київське видавництво</td>
-                <td>220</td>
-                <td>Драма-феєрія</td>
-                <td>180 грн</td>
-                <td>Сектор 1, Полиця 2</td>
-                <td>987654321</td>
-            </tr>
-            <tr>
-                <td>Михайло Коцюбинський</td>
-                <td>Тіні забутих предків</td>
-                <td>Чернівецьке видавництво</td>
-                <td>160</td>
-                <td>Новела</td>
-                <td>150 грн</td>
-                <td>Сектор 2, Полиця 3</td>
-                <td>234567890</td>
-            </tr>
-            <tr>
-                <td>Тарас Шевченко</td>
-                <td>Кобзар</td>
-                <td>Харківське видавництво</td>
-                <td>500</td>
-                <td>Поезія</td>
-                <td>300 грн</td>
-                <td>Сектор 4, Полиця 1</td>
-                <td>345678901</td>
-            </tr>
-            <tr>
-                <td>Ольга Кобилянська</td>
-                <td>Земля</td>
-                <td>Івано-Франківське видавництво</td>
-                <td>280</td>
-                <td>Роман</td>
-                <td>220 грн</td>
-                <td>Сектор 5, Полиця 4</td>
-                <td>456789012</td>
-            </tr>
-            <tr>
-                <td>Юрій Андрухович</td>
-                <td>Рекреації</td>
-                <td>Львівське видавництво</td>
+            <tr aling="left" headers="row-1-header">
+                <td rowspan="2" aling="center" headers="id-header" scope="row" abbr="Book ID">1</td>
+                <td>Мистецтво читання</td>
+                <td rowspan="2">Видавництво "Світ"</td>
+                <td>Київ</td>
+                <td>+380441234567</td>
                 <td>320</td>
-                <td>Сучасна проза</td>
-                <td>250 грн</td>
-                <td>Сектор 6, Полиця 7</td>
-                <td>567890123</td>
+            </tr>
+            <tr aling="left">
+                <td>Подорож у світ знань</td>
+                <td>Львів</td>
+                <td>+380321234567</td>
+                <td>280</td>
+            </tr>
+            <tr aling="left">
+                <td rowspan="2" headers="id-header">2</td>
+                <td>Магія слова</td>
+                <td rowspan="2">Видавництво "Літера"</td>
+                <td>Одеса</td>
+                <td>+380482345678</td>
+                <td>450</td>
+            </tr>
+            <tr aling="left">
+                <td>Техніка читання</td>
+                <td>Харків</td>
+                <td>+380572345678</td>
+                <td>380</td>
+            </tr>
+            <tr aling="left">
+                <td rowspan="2" headers="id-header">3</td>
+                <td>Історії великих авторів</td>
+                <td rowspan="2">Видавництво "Книга"</td>
+                <td>Дніпро</td>
+                <td>+380562345678</td>
+                <td>560</td>
+            </tr>
+            <tr aling="left">
+                <td>Світ пригод</td>
+                <td>Запоріжжя</td>
+                <td>+380612345678</td>
+                <td>420</td>
+            </tr>
+            <tr aling="left">
+                <td rowspan="2" headers="id-header">4</td>
+                <td>Дослідження культури</td>
+                <td rowspan="2">Видавництво "Нова хвиля"</td>
+                <td>Чернігів</td>
+                <td>+380462345678</td>
+                <td>300</td>
+            </tr>
+            <tr aling="left">
+                <td>Мова та література</td>
+                <td>Вінниця</td>
+                <td>+380432345678</td>
+                <td>350</td>
+            </tr>
+            <tr aling="left">
+                <td>5</td>
+                <td>Мандрівка крізь час</td>
+                <td>Видавництво "Обрії"</td>
+                <td>Полтава</td>
+                <td>+380532345678</td>
+                <td>480</td>
             </tr>
             <tr>
-                <td>Ліна Костенко</td>
-                <td>Маруся Чурай</td>
-                <td>Київське видавництво</td>
-                <td>340</td>
-                <td>Історичний роман у віршах</td>
-                <td>240 грн</td>
-                <td>Сектор 7, Полиця 8</td>
-                <td>678901234</td>
-            </tr>
-            <tr>
-                <td>Олександр Довженко</td>
-                <td>Зачарована Десна</td>
-                <td>Чернігівське видавництво</td>
-                <td>180</td>
-                <td>Автобіографічна повість</td>
-                <td>190 грн</td>
-                <td>Сектор 8, Полиця 9</td>
-                <td>789012345</td>
+                <td colspan="5">Загальна кількість книг у бібліотеці</td>
+                <td>20,000</td>
             </tr>
         </tbody>
     </table>
